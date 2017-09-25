@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{91F108C2-ABDB-4854-913C-667F0EA06C85}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{39C6F8E9-4E63-4C8C-BECF-1BF138D9E86F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ViHib</RootNamespace>
-    <AssemblyName>ViHib</AssemblyName>
+    <RootNamespace>TestConsole</RootNamespace>
+    <AssemblyName>TestConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,6 +25,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,30 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\Column.cs" />
-    <Compile Include="Attributes\Id.cs" />
-    <Compile Include="Attributes\OneToMany.cs" />
-    <Compile Include="Attributes\SequenceGenerator.cs" />
-    <Compile Include="Attributes\Table.cs" />
-    <Compile Include="Exceptions\ErrorSeqColumnType.cs" />
-    <Compile Include="Exceptions\ExSeqLimin.cs" />
-    <Compile Include="Exceptions\HidException.cs" />
-    <Compile Include="Exceptions\NonLOadadTypeError.cs" />
-    <Compile Include="Exceptions\NonLoadedExternalDate.cs" />
-    <Compile Include="Exceptions\NotCompatibleClass.cs" />
-    <Compile Include="Exceptions\PrimaryKeyEx.cs" />
-    <Compile Include="Exceptions\TypeNameError.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DopData.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeInfo.cs" />
-    <Compile Include="Utils\Utils.cs" />
-    <Compile Include="Utils\WriteUtil.cs" />
-    <Compile Include="Utils\xml_ser.cs" />
-    <Compile Include="ViNibConnector.cs" />
-    <Compile Include="ViNibSession.cs" />
-    <Compile Include="XML\ViHibConfiguration.cs" />
+    <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TODO.txt" />
+    <ProjectReference Include="..\ViHib\ViHib.csproj">
+      <Project>{91f108c2-abdb-4854-913c-667f0ea06c85}</Project>
+      <Name>ViHib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,15 @@
+﻿TODO
+
+* сиквенсы +
+* вложенные типы +
+* котроль типов в Save list<type> +
+* Commit +
+* id is not Int64 +
+* выбрать все +
+* oracle test
+* Update +
+* Нормальный комментарии
+* внедрить учет OneToMany
+
+? tablename принудительный  +
+? cascade save
