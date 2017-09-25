@@ -13,3 +13,5 @@
 
 ? tablename принудительный  +
 ? cascade save
+
+* Git tst
